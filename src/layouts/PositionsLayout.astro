@@ -3,13 +3,14 @@ import Layout from "./Layout.astro";
 
 interface Props {
   title: string;
-  lang: string;
 }
 
-const { title, lang } = Astro.props;
+const { title } = Astro.props;
 
-const isEN = lang === "en";
-const enHref = "/positions";
+const path = Astro.url.pathname;
+const isEN = !path.startsWith("/positions/ja");
+const lang = isEN ? "en" : "ja";
+const enHref = "/positions/en";
 const jaHref = "/positions/ja";
 ---
 
