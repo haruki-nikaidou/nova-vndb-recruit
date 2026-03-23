@@ -1,12 +1,5 @@
 ---
 import Layout from "./Layout.astro";
-
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
-
 const path = Astro.url.pathname;
 const isEN = !path.startsWith("/positions/ja");
 const lang = isEN ? "en" : "ja";
@@ -14,9 +7,9 @@ const enHref = "/positions/en";
 const jaHref = "/positions/ja";
 ---
 
-<Layout title={`${title} — Nova VNDB`} lang={lang}>
+<Layout title={`Opening Positions - Nova VNDB`} lang={lang}>
   <div class="flex items-baseline justify-between gap-8 flex-wrap">
-    <h1 class="text-[2rem] font-bold tracking-[0.01em] m-0">{title}</h1>
+    <h1 class="text-[2rem] font-bold tracking-[0.01em] m-0">Opening Positions</h1>
     <div class="flex items-center gap-2 text-sm shrink-0">
       <a
         href={enHref}
