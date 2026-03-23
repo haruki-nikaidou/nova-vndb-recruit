@@ -1,0 +1,96 @@
+---
+import Layout from "./Layout.astro";
+
+interface Props {
+  title: string;
+  lang: string;
+}
+
+const { title, lang } = Astro.props;
+
+const isEN = lang === "en";
+const enHref = "/positions";
+const jaHref = "/positions/ja";
+---
+
+<Layout title={`${title} — Nova VNDB`} lang={lang}>
+  <div class="flex items-baseline justify-between gap-8 flex-wrap">
+    <h1 class="text-[2rem] font-bold tracking-[0.01em] m-0">{title}</h1>
+    <div class="flex items-center gap-2 text-sm shrink-0">
+      <a
+        href={enHref}
+        class={isEN
+          ? "text-ink font-bold border border-frame bg-surface px-2 py-1 no-underline pointer-events-none"
+          : "text-accent no-underline border border-transparent px-2 py-1 hover:border-frame hover:bg-surface transition-colors"}
+      >
+        English
+      </a>
+      <span class="text-frame select-none">|</span>
+      <a
+        href={jaHref}
+        class={!isEN
+          ? "text-ink font-bold border border-frame bg-surface px-2 py-1 no-underline pointer-events-none"
+          : "text-accent no-underline border border-transparent px-2 py-1 hover:border-frame hover:bg-surface transition-colors"}
+      >
+        日本語
+      </a>
+    </div>
+  </div>
+
+  <hr class="my-6 border-0 border-t-2 border-frame" />
+
+  <div class="positions-body">
+    <slot />
+  </div>
+</Layout>
+
+<style>
+  .positions-body :global(h2) {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--color-frame);
+  }
+
+  .positions-body :global(h3) {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .positions-body :global(p) {
+    margin-bottom: 1rem;
+    color: var(--color-ink);
+  }
+
+  .positions-body :global(ul) {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .positions-body :global(ol) {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .positions-body :global(li) {
+    margin-bottom: 0.3rem;
+  }
+
+  .positions-body :global(a) {
+    color: var(--color-accent);
+  }
+
+  .positions-body :global(blockquote) {
+    border-left: 3px solid var(--color-accent);
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-surface);
+    color: var(--color-muted);
+  }
+</style>

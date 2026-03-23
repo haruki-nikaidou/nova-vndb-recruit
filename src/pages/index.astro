@@ -1,11 +1,153 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Nova VNDB — Join Us" lang="en">
+
+  <!-- Hero -->
+  <div class="text-center pb-10 border-b-2 border-frame mb-12">
+    <p class="text-[0.8rem] tracking-[0.12em] uppercase text-muted mb-3">
+      Successor to VNDB &bull; Founded March 2026
+    </p>
+    <h1 class="font-bold tracking-[0.05em] uppercase text-ink m-0 mb-4" style="font-size: clamp(2.5rem, 6vw, 4rem);">
+      Nova VNDB
+    </h1>
+    <p class="text-[1.1rem] text-muted max-w-[600px] mx-auto leading-[1.7] m-0">
+      We are building the future of the visual novel database — free, open, and for everyone.
+    </p>
+  </div>
+
+  <!-- Bilingual two-column grid -->
+  <div class="bilingual-grid">
+
+    <!-- English Column -->
+    <section>
+      <div class="inline-block text-[0.7rem] font-bold tracking-[0.15em] uppercase text-cream bg-accent px-2 py-[0.15rem] mb-6">
+        EN
+      </div>
+
+      <h2 class="text-[1.15rem] tracking-[0.02em] mb-[0.6rem] pb-[0.4rem] border-b border-frame uppercase font-bold">
+        About Nova VNDB
+      </h2>
+      <p class="text-[0.95rem] mb-4">
+        Nova VNDB is the successor to <strong>VNDB</strong>, the beloved public charitable library for visual novels
+        whose creator passed away on March 22, 2026. We honor their legacy and commit to keeping the resource
+        alive, independent, and open.
+      </p>
+
+      <h2 class="text-[1.15rem] tracking-[0.02em] mb-[0.6rem] pb-[0.4rem] border-b border-frame uppercase font-bold">
+        Our Mission
+      </h2>
+      <p class="text-[0.95rem] mb-2">
+        We carry forward the principles that made VNDB exceptional:
+      </p>
+      <ul class="list-disc pl-5 text-[0.95rem] mb-4 space-y-1">
+        <li><strong>Free</strong> — always free to use, forever</li>
+        <li><strong>No advertisements</strong> — no tracking, no noise</li>
+        <li><strong>Voluntary</strong> — driven by people who care</li>
+        <li><strong>Reliable</strong> — high-availability infrastructure built for longevity</li>
+        <li><strong>Open community</strong> — transparent governance, welcoming contributors</li>
+      </ul>
+      <p class="text-[0.95rem] mb-4">
+        We are building a highly reliable system, making Nova VNDB the strongest candidate among all successor projects.
+      </p>
+
+      <h2 class="text-[1.15rem] tracking-[0.02em] mb-[0.6rem] pb-[0.4rem] border-b border-frame uppercase font-bold">
+        Open Positions
+      </h2>
+      <p class="text-[0.95rem] mb-2">We are looking for passionate people to help build and sustain this project.</p>
+      <ul class="list-disc pl-5 text-[0.95rem] mb-6 space-y-1">
+        <li>Web Developer</li>
+        <li>Internationalization Staff (translators, etc.)</li>
+        <li>Manager</li>
+        <li>Community Moderator</li>
+      </ul>
+      <a
+        href="/positions"
+        class="inline-block mt-1 px-5 py-[0.55rem] bg-accent text-cream no-underline text-[0.9rem] font-semibold tracking-[0.04em] border-2 border-accent hover:bg-accent-dark hover:border-accent-dark transition-colors"
+      >
+        View open positions →
+      </a>
+    </section>
+
+    <!-- Divider -->
+    <div class="col-divider bg-frame"></div>
+
+    <!-- Japanese Column -->
+    <section lang="ja">
+      <div class="inline-block text-[0.7rem] font-bold tracking-[0.15em] uppercase text-cream bg-accent px-2 py-[0.15rem] mb-6">
+        JA
+      </div>
+
+      <h2 class="text-[1.15rem] tracking-[0.02em] mb-[0.6rem] pb-[0.4rem] border-b border-frame uppercase font-bold">
+        Nova VNDBについて
+      </h2>
+      <p class="text-[0.95rem] mb-4">
+        Nova VNDBは、ビジュアルノベルのための公共図書館として広く愛されてきた<strong>VNDB</strong>の後継プロジェクトです。
+        創設者が2026年3月22日に逝去されたことを受け、私たちはその遺志を継ぎ、このリソースを
+        独立した・開かれた形で存続させることを誓います。
+      </p>
+
+      <h2 class="text-[1.15rem] tracking-[0.02em] mb-[0.6rem] pb-[0.4rem] border-b border-frame uppercase font-bold">
+        私たちの使命
+      </h2>
+      <p class="text-[0.95rem] mb-2">
+        VNDBが特別であった理由——その原則を私たちは受け継ぎます：
+      </p>
+      <ul class="list-disc pl-5 text-[0.95rem] mb-4 space-y-1">
+        <li><strong>無料</strong> — 永久に誰でも無料で利用可能</li>
+        <li><strong>広告なし</strong> — トラッキングなし、雑音なし</li>
+        <li><strong>自発的</strong> — 情熱を持つ人々によって運営</li>
+        <li><strong>信頼性</strong> — 長期的な可用性を見据えた高信頼インフラ</li>
+        <li><strong>オープンコミュニティ</strong> — 透明なガバナンス、貢献者を歓迎</li>
+      </ul>
+      <p class="text-[0.95rem] mb-4">
+        私たちは高い信頼性を持つシステムを構築し、あらゆる後継プロジェクトの中で最有力候補となることを目指しています。
+      </p>
+
+      <h2 class="text-[1.15rem] tracking-[0.02em] mb-[0.6rem] pb-[0.4rem] border-b border-frame uppercase font-bold">
+        募集中のポジション
+      </h2>
+      <p class="text-[0.95rem] mb-2">このプロジェクトを共に構築・維持してくれる方を募集しています。</p>
+      <ul class="list-disc pl-5 text-[0.95rem] mb-6 space-y-1">
+        <li>Webデベロッパー</li>
+        <li>国際化スタッフ（翻訳者など）</li>
+        <li>マネージャー</li>
+        <li>コミュニティモデレーター</li>
+      </ul>
+      <a
+        href="/positions/ja"
+        class="inline-block mt-1 px-5 py-[0.55rem] bg-accent text-cream no-underline text-[0.9rem] font-semibold tracking-[0.04em] border-2 border-accent hover:bg-accent-dark hover:border-accent-dark transition-colors"
+      >
+        募集要項を見る →
+      </a>
+    </section>
+
+  </div>
 </Layout>
+
+<style>
+  .bilingual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0 2.5rem;
+    align-items: start;
+  }
+
+  .col-divider {
+    align-self: stretch;
+  }
+
+  @media (max-width: 700px) {
+    .bilingual-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .col-divider {
+      height: 1px;
+      width: 100%;
+      margin: 2.5rem 0;
+    }
+  }
+</style>
